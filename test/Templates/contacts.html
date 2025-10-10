@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты - Авто из Азии{% endblock %}
+
+{% block content %}
+<h2>Контакты</h2>
+
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
+        <h3>Наши контакты</h3>
+        <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+        <p><strong>Email:</strong> info@asia-auto.ru</p>
+        <p><strong>Адрес:</strong> г. Москва, ул. Автомобильная, 15</p>
+        <p><strong>Режим работы:</strong> Пн-Пт 9:00-18:00</p>
+    </div>
+
+    <div style="flex: 1;">
+        <h3>Оставить заявку</h3>
+        <form>
+            <div style="margin-bottom: 10px;">
+                <input type="text" placeholder="Ваше имя" style="width: 100%; padding: 8px; border: 1px solid #ddd;" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <input type="tel" placeholder="Телефон" style="width: 100%; padding: 8px; border: 1px solid #ddd;" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <textarea placeholder="Сообщение" style="width: 100%; padding: 8px; border: 1px solid #ddd; height: 100px;"></textarea>
+            </div>
+            <button type="submit" style="padding: 10px 20px; background: #007bff; color: white; border: none; width: 100%;">Отправить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

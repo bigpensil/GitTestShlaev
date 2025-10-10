@@ -1,0 +1,99 @@
+{% block title %}{% endblock %}
+
+{% extends 'base.html' %}
+{% block content %}
+    <p style="font-size: 40px; font-weight: bold; color: #CDA434">Добро пожаловать в админ панель, здесь находяться заказы пользователев</p>
+
+     <style>
+        .products-container {
+            margin: 0;
+            padding: 0;
+            font-family: initial;
+            font-size: initial;
+        }
+        .products-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            color: #000000;
+            font-weight: bold;
+        }
+        .products-table th, 
+        .products-table td { 
+            border: 3px solid #ffffff; 
+            padding: 12px; 
+            text-align: left;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: bold;
+        }
+        .products-table th { 
+            background-color: #292929; 
+            color: #CDA434;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .products-table tr:nth-child(even) { 
+            background-color: #ffffff;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .products-table tr:nth-child(odd) { 
+            background-color: #ffffff;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .no-products {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #666;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .products-container h1 {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            margin: inherit;
+            padding: inherit;
+        }
+    </style>
+
+    <h1 style = "color:#CDA434">Список товаров</h1>
+    
+    <div class="products-container">
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th style = "font-size: 20px;text-align: center">№ Товара</th>
+                    <th style = "font-size: 20px;text-align: center">№ машины</th>
+                    <th style = "font-size: 20px;text-align: center">ФИО</th>
+                    <th style = "font-size: 20px;text-align: center">Номер телефона</th>
+                    <th style = "font-size: 20px;text-align: center">почта</th>
+                    <th style = "font-size: 20px;text-align: center">пожелания</th>
+                    <th style = "font-size: 20px;text-align: center">дата</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td><p style = "text-align: center">{{ product['id'] }}</td></p>
+                    <td>{{ product['car_id'] }}</td>
+                    <td>{{ product['customer_name'] }}</td>
+                    <td>{{ product['phone'] }}</td>
+                    <td>{{ product['email'] }}</td>
+                    <td>{{ product['comments'] }}</td>
+                    <td>{{ product['order_date'] }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="4" class="no-products">Нет заказов</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

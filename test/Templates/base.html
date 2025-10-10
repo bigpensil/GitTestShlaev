@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Авто из Азии{% endblock %}</title>
+</head>
+<body>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <header style="border-bottom: 1px solid #ccc; padding: 10px 0; margin-bottom: 20px;">
+            <h1 style="margin: 0;">АВТО ИЗ АЗИИ</h1>
+            <nav style="margin-top: 10px;">
+                <a href="/" style="margin-right: 15px;">Главная</a>
+                <a href="/catalog/" style="margin-right: 15px;">Каталог</a>
+                <a href="/company/" style="margin-right: 15px;">О компании</a>
+                <a href="/career/" style="margin-right: 15px;">Карьера</a>
+                <a href="/feedback/" style="margin-right: 15px;">Отзывы</a>
+                <a href="/contacts/">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer style="border-top: 1px solid #ccc; padding: 20px 0; margin-top: 40px; text-align: center;">
+            <p>Телефон: +7 (999) 123-45-67</p>
+            <p>Email: info@asia-auto.ru</p>
+            <p>&copy; 2023 Авто из Азии</p>
+        </footer>
+    </div>
+</body>
+</html>

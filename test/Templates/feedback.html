@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Отзывы - Авто из Азии{% endblock %}
+
+{% block content %}
+<h2>Отзывы наших клиентов</h2>
+
+<div style="margin: 20px 0;">
+    <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+        <h3>Иван Петров</h3>
+        <p>Заказывал Toyota Camry. Доставили за 2 недели. Машина в идеальном состоянии, все документы оформлены правильно. Рекомендую!</p>
+        <p><strong>Дата:</strong> 15 ноября 2023</p>
+    </div>
+
+    <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+        <h3>Мария Сидорова</h3>
+        <p>Покупкой Honda CR-V очень довольна. Цены действительно ниже, чем у официальных дилеров. Сервис на высшем уровне.</p>
+        <p><strong>Дата:</strong> 3 ноября 2023</p>
+    </div>
+
+    <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0;">
+        <h3>Алексей Козлов</h3>
+        <p>Приобрел Hyundai Tucson. Все прозрачно, менеджеры всегда на связи. Доставка заняла 18 дней. Спасибо за качественную работу!</p>
+        <p><strong>Дата:</strong> 25 октября 2023</p>
+    </div>
+</div>
+
+<h3>Оставить отзыв</h3>
+<form style="border: 1px solid #ddd; padding: 15px;">
+    <div style="margin-bottom: 10px;">
+        <input type="text" placeholder="Ваше имя" style="width: 100%; padding: 8px; border: 1px solid #ddd;" required>
+    </div>
+    <div style="margin-bottom: 10px;">
+        <input type="email" placeholder="Ваш email" style="width: 100%; padding: 8px; border: 1px solid #ddd;">
+    </div>
+    <div style="margin-bottom: 10px;">
+        <textarea placeholder="Ваш отзыв" style="width: 100%; padding: 8px; border: 1px solid #ddd; height: 100px;" required></textarea>
+    </div>
+    <button type="submit" style="padding: 10px 20px; background: #007bff; color: white; border: none;">Отправить отзыв</button>
+</form>
+{% endblock %}
